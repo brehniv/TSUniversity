@@ -4,7 +4,7 @@ function round2(number) {
 }
 function triangle(value1, type1, value2, type2) {
     // Перевірка на некоректність уведених значень
-    if (value1 <= 0.01 || value2 <= 0.01) {
+    if (value1 <= 0.01 || value2 <= 0.01 || isNaN(value1) || isNaN(value2)) {
         return "failed: value must be positive or bigger";
     }
     var validTypes = [

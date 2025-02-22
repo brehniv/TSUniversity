@@ -7,7 +7,7 @@ type TriangleType = "leg" | "hypotenuse" | "adjacent angle" | "opposite angle" |
 
 function triangle(value1: number, type1: TriangleType, value2: number, type2: TriangleType): string {
     // Перевірка на некоректність уведених значень
-    if (value1 <= 0.01 || value2 <= 0.01) {
+    if (value1 <= 0.01 || value2 <= 0.01|| isNaN(value1) || isNaN(value2)) {
         return "failed: value must be positive or bigger";
     }
 
