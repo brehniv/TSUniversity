@@ -31,6 +31,7 @@ var CatalogApp;
     function loadHome() {
         ajaxGet(homeHtmlPath, function (responseText) {
             insertHtml("#mainHome", responseText);
+            addHomeButtonListeners();
         }, false);
     }
     CatalogApp.loadHome = loadHome;
@@ -42,6 +43,7 @@ var CatalogApp;
         ajaxGet(categoryHtmlPath, function (categoryHtml) {
             var viewHtml = buildCategoriesViewHtml(categories, categoryHtml);
             insertHtml("#mainHome", viewHtml);
+            addCategoryEventListeners();
         }, false);
     }
     function buildCategoriesViewHtml(categories, categoryHtml) {
@@ -55,6 +57,18 @@ var CatalogApp;
         }
         finalHTML += "</section><div class='mt-3 text-center'><a href='#' onclick='CatalogApp.randomCategory()'>Specials</a></div></div>";
         return finalHTML;
+    }
+    function addCategoryEventListeners() {
+        var buttons = document.querySelectorAll(".go-to-category-btn");
+        buttons.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                var card = btn.closest(".category-card");
+                var shortName = card === null || card === void 0 ? void 0 : card.getAttribute("data-category");
+                if (shortName) {
+                    CatalogApp.loadCatalogItems(shortName);
+                }
+            });
+        });
     }
     function randomCategory() {
         var randIndex = Math.floor(Math.random() * randCategories.length);
@@ -85,6 +99,20 @@ var CatalogApp;
         }
         finalHTML += "</section>";
         return finalHTML;
+    }
+    function addHomeButtonListeners() {
+        var buttons = document.querySelectorAll("[data-action]");
+        buttons.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                var action = btn.getAttribute("data-action");
+                if (action === "catalog") {
+                    CatalogApp.loadCatalogCategories();
+                }
+                else if (action === "random") {
+                    CatalogApp.randomCategory();
+                }
+            });
+        });
     }
     // Initialization
     window.addEventListener("DOMContentLoaded", function () {
