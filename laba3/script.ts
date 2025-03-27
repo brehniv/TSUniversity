@@ -120,7 +120,6 @@ namespace CatalogApp {
       });
     }
   
-    // Initialization
     window.addEventListener("DOMContentLoaded", () => {
       const homeLink = document.querySelector("#navHome");
       const catalogLink = document.querySelector("#navCatalog");
@@ -139,5 +138,4 @@ namespace CatalogApp {
     });
   }
   
-  // Для глобального доступу
   (window as any).CatalogApp = CatalogApp;

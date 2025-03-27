@@ -114,7 +114,6 @@ var CatalogApp;
             });
         });
     }
-    // Initialization
     window.addEventListener("DOMContentLoaded", function () {
         var homeLink = document.querySelector("#navHome");
         var catalogLink = document.querySelector("#navCatalog");
@@ -129,5 +128,4 @@ var CatalogApp;
         loadHome();
     });
 })(CatalogApp || (CatalogApp = {}));
-// Для глобального доступу
 window.CatalogApp = CatalogApp;
