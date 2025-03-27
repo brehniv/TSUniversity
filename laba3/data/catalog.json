@@ -1,0 +1,5 @@
+[
+    { "id": 1, "name": "Хліби", "short_name": "bread", "notes": "" },
+    { "id": 2, "name": "Солодощі", "short_name": "sweets", "notes": "" },
+    { "id": 3, "name": "Булки", "short_name": "rolls", "notes": "" }
+]

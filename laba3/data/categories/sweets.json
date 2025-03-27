@@ -1,0 +1,45 @@
+{
+    "cat_name": "Солодощі",
+    "objects": [
+        {
+            "id": 1,
+            "name": "Пиріжки з яблуками",
+            "shortname": "apple_pies",
+            "description": "Смачні пиріжки з яблуками",
+            "price": 20,
+            "img": "https://place-hold.it/200x200"
+        },
+        {
+            "id": 2,
+            "name": "Тірамісу",
+            "shortname": "tiramisu",
+            "description": "Італійський десерт",
+            "price": 25,
+            "img": "https://place-hold.it/200x200"
+        },
+        {
+            "id": 3,
+            "name": "Шоколадні печиво",
+            "shortname": "chocolate_cookies",
+            "description": "Солодке шоколадне печиво",
+            "price": 18,
+            "img": "https://place-hold.it/200x200"
+        },
+        {
+            "id": 4,
+            "name": "Морквяний торт",
+            "shortname": "carrot_cake",
+            "description": "Соковитий морквяний торт",
+            "price": 22,
+            "img": "https://place-hold.it/200x200"
+        },
+        {
+            "id": 5,
+            "name": "Мафіни з ягодами",
+            "shortname": "berry_muffins",
+            "description": "Ароматні мафіни з свіжими ягодами",
+            "price": 15,
+            "img": "https://place-hold.it/200x200"
+        }
+    ]
+}

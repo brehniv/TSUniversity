@@ -1,0 +1,45 @@
+{
+    "cat_name": "Булки",
+    "objects": [
+        {
+            "id": 1,
+            "name": "Круасан",
+            "shortname": "croissant",
+            "description": "Легкий круасан",
+            "price": 8,
+            "img": "https://place-hold.it/200x200"
+        },
+        {
+            "id": 2,
+            "name": "Рогалик з маком",
+            "shortname": "poppy_seed_rolls",
+            "description": "Смачний рогалик з маком",
+            "price": 7,
+            "img": "https://place-hold.it/200x200"
+        },
+        {
+            "id": 3,
+            "name": "Булочка з корицею",
+            "shortname": "cinnamon_roll",
+            "description": "Ароматна булочка з корицею",
+            "price": 9,
+            "img": "https://place-hold.it/200x200"
+        },
+        {
+            "id": 4,
+            "name": "Кнедлик з творогом",
+            "shortname": "cheese_dumpling",
+            "description": "Ніжний кнедлик з творогом",
+            "price": 10,
+            "img": "https://place-hold.it/200x200"
+        },
+        {
+            "id": 5,
+            "name": "Клубнічні пиріжки",
+            "shortname": "strawberry_pastries",
+            "description": "Солодкі пиріжки з клубнікою",
+            "price": 12,
+            "img": "https://place-hold.it/200x200"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "cat_name": "Хліби",
+    "objects": [
+        {
+            "id": 1,
+            "name": "Білий хліб",
+            "shortname": "white_bread",
+            "description": "Дуже смачний білий хліб",
+            "price": 10,
+            "img": "https://place-hold.it/200x200"
+        },
+        {
+            "id": 2,
+            "name": "Чорний хліб",
+            "shortname": "dark_bread",
+            "description": "Смачний чорний хліб",
+            "price": 12,
+            "img": "https://place-hold.it/200x200"
+        },
+        {
+            "id": 3,
+            "name": "Багет",
+            "shortname": "baguette",
+            "description": "Класичний багет",
+            "price": 15,
+            "img": "https://place-hold.it/200x200"
+        },
+        {
+            "id": 4,
+            "name": "Французька булка",
+            "shortname": "french_bread",
+            "description": "Ароматна французька булка",
+            "price": 18,
+            "img": "https://place-hold.it/200x200"
+        },
+        {
+            "id": 5,
+            "name": "Італійський хліб",
+            "shortname": "italian_bread",
+            "description": "Смачний італійський хліб",
+            "price": 20,
+            "img": "https://place-hold.it/200x200"
+        }
+    ]
+}
