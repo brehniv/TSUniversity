@@ -34,6 +34,7 @@ namespace CatalogApp {
     export function loadHome(): void {
       ajaxGet(homeHtmlPath, (responseText: string) => {
         insertHtml("#mainHome", responseText);
+        addHomeButtonListeners();
       }, false);
     }
   
@@ -45,6 +46,7 @@ namespace CatalogApp {
       ajaxGet(categoryHtmlPath, (categoryHtml: string) => {
         const viewHtml = buildCategoriesViewHtml(categories, categoryHtml);
         insertHtml("#mainHome", viewHtml);
+        addCategoryEventListeners();
       }, false);
     }
   
@@ -58,6 +60,19 @@ namespace CatalogApp {
       }
       finalHTML += "</section><div class='mt-3 text-center'><a href='#' onclick='CatalogApp.randomCategory()'>Specials</a></div></div>";
       return finalHTML;
+    }
+  
+    function addCategoryEventListeners(): void {
+      const buttons = document.querySelectorAll(".go-to-category-btn");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const card = (btn as HTMLElement).closest(".category-card");
+          const shortName = card?.getAttribute("data-category");
+          if (shortName) {
+            CatalogApp.loadCatalogItems(shortName);
+          }
+        });
+      });
     }
   
     export function randomCategory(): void {
@@ -91,6 +106,20 @@ namespace CatalogApp {
       return finalHTML;
     }
   
+    function addHomeButtonListeners(): void {
+      const buttons = document.querySelectorAll("[data-action]");
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const action = (btn as HTMLElement).getAttribute("data-action");
+          if (action === "catalog") {
+            CatalogApp.loadCatalogCategories();
+          } else if (action === "random") {
+            CatalogApp.randomCategory();
+          }
+        });
+      });
+    }
+  
     // Initialization
     window.addEventListener("DOMContentLoaded", () => {
       const homeLink = document.querySelector("#navHome");
@@ -112,4 +141,3 @@ namespace CatalogApp {
   
   // Для глобального доступу
   (window as any).CatalogApp = CatalogApp;
-  
